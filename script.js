@@ -15,9 +15,10 @@ function sendMail(){
     templateID = "template_rj0evsq";
     emailjs.send(serviceID , templateID , params)
     .then(res => {
-        name = "";
-        email = "";
-        message = "";
+document.getElementById("name").value = "";
+document.getElementById("email").value = "";
+document.getElementById("message").value = "";
+
         
         console.log(res);
         alert("Email Sent successfully wait for response");
