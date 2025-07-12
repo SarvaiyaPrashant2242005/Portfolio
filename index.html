@@ -269,16 +269,16 @@ I'm Prashant Sarvaiya, a passionate full-stack developer, IoT enthusiast, and so
 
                 <h3>Contact</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                <form>
+                <form onsubmit="sendMail(event)">
                     <div class="row">
                         <div class="col-sm-6">
-                            <input type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
+                            <input type="text" name="name" id="name" class="form-control mt-x-0" placeholder="Name" required>
                         </div>
                         <div class="col-sm-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>   
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>   
                         </div>
                         <div class="col-sm-12">
-                            <textarea name="message" id="mesaage" class="form-control" placeholder="Message" required></textarea>
+                            <textarea name="message" id="message" id="mesaage" class="form-control" placeholder="Message" required></textarea>
                         </div>
                     </div>
                     <button href="#" class="btn btn-border" type="submit">Hire Me <span class="glyphicon glyphicon-send"></span></button>
@@ -386,6 +386,17 @@ VoloConnect is a full-stack web application that bridges the gap between event o
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "obtqv5u6h97AIm2KO",
+        });
+    })();
+</script>
+<script src="script.js"></script>
   
 </body>
 </html>
